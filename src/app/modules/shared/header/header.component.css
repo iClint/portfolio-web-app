@@ -1,0 +1,41 @@
+.header {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  background: rgb(101, 101, 101);
+  color: white;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.header__image {
+  max-width: 100px;
+  border-radius: 10px;
+  border: 2px solid rgb(169, 169, 170);
+  box-shadow: 2px 2px 6px black;
+}
+
+.header__container-gap--small{
+    width:8px;
+}
+
+.header__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title--large {
+  font-size: 24px;
+}
+
+.header__subtitle--medium {
+  font-size: 16px;
+}
+
+.header__title, .header__subtitle{
+    text-shadow:2px 2px 6px black;
+}
