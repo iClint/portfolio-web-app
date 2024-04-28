@@ -1,0 +1,24 @@
+<nav class="navigation" [ngClass]="{ 'show-menu': isMenuVisible }">
+  <div class="navigation__frame"></div>
+  <div class="navigation__menu-container">
+    <ul
+      class="navigation__menu"
+      *ngFor="let navOption of navOptions"
+      [@expandCollapse]="isMenuVisible ? 'expanded' : 'collapsed'"
+    >
+      <li class="navigation__menu-items">
+        <a class="nav-link" href="#">{{ navOption }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navigation__frame"></div>
+  <div class="navigation__hamburger" (click)="toggleMenu()">
+    <div class="navigation__hamburger-button">
+      <div class="hamburger-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+</nav>

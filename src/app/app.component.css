@@ -1,0 +1,20 @@
+.router-outlet {
+  background-color: rgb(100, 100, 100);
+}
+
+.temp {
+    display: flex;
+    justify-content: center;
+    padding:8px;
+    height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgba(101, 101, 101, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.card{
+    height: fit-content;
+    width:700px;
+}
