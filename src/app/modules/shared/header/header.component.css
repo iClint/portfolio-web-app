@@ -7,14 +7,9 @@ h2 {
 .header {
   min-width: 330px;
   position: relative;
-  padding-top: 16px;
-  padding-bottom: 8px;
-  background: linear-gradient(
-    45deg,
-    rgba(101, 101, 101, 1),
-    rgba(255, 255, 255, 0)
-  );
-  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: black;
 }
 
 .header__container {
@@ -27,20 +22,19 @@ h2 {
 }
 
 .header__image {
-  max-width: 100px;
+  max-width: 60px;
   border-radius: 10px;
   border: 2px solid rgb(169, 169, 170);
-  box-shadow: 2px 2px 6px black;
 }
 
 .header__container-gap--small {
-  width: 8px;
+  width: 4px;
 }
 
 .header__info {
   display: flex;
   flex-direction: column;
-  padding-left: 16px;
+  padding-bottom:2px;
 }
 
 .header__title--large {
@@ -53,7 +47,7 @@ h2 {
 
 .header__title,
 .header__subtitle {
-  text-shadow: 2px 2px 6px black;
+  /* text-shadow: 2px 2px 6px black; */
 }
 
 .navigation__hamburger-button {
@@ -70,7 +64,7 @@ h2 {
 }
 
 /* Small device*/
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 431px) {
   .navigation__hamburger-button {
     display: block;
   }
@@ -78,7 +72,7 @@ h2 {
     width: 4px;
   }
   .header__image {
-    max-width: 60px;
+    max-width: 45px;
   }
   .header__title--large {
     font-size: 20px;

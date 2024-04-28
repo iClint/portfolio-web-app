@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 jobTitle = "Associate full stack software Engineer";
-employerName = "Woolies X: Home run - Customer Delivery Experience (CDE)"
+employerName = "WooliesX"
 }

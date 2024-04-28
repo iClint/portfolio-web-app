@@ -1,8 +1,5 @@
-.router-outlet {
-  background-color: rgb(100, 100, 100);
-}
 
-.temp {
+/* .temp {
     display: flex;
     justify-content: center;
     padding:8px;
@@ -12,9 +9,9 @@
     rgba(101, 101, 101, 1),
     rgba(255, 255, 255, 0)
   );
-}
+} */
 
-.card{
-    height: fit-content;
-    width:700px;
+.card {
+    
+  height: fit-content;
 }
