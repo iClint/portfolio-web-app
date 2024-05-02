@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { aboutConfig } from './about.config';
-import { HttpClientService } from '../../services/http-client.service';
+import { HttpService } from '../../services/http-service.service';
 import { CommonModule } from '@angular/common';
 import { take } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
   _config = aboutConfig;
   postResult: any;
 
-  constructor(private httpService: HttpClientService) {}
+  constructor(private httpService: HttpService) {}
 
   ngOnInit() {
     this.httpService

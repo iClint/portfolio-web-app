@@ -3,7 +3,7 @@
   color: black;
 }
 .navigation {
-    background-color: white;
+  background-color: white;
   /* background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0) 0%,
@@ -72,7 +72,7 @@
   height: 3px;
   background-color: black;
 }
-
+/* Small screen */
 @media screen and (max-width: 430px) {
   .navigation__hamburger {
     display: block;
@@ -94,6 +94,17 @@
     padding: 16px;
     width: 100%;
     font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media screen and (max-width: 430px) {
+  .navigation__menu-container {
+    display: flex;
+  }
+
+  .show-menu {
+    height: auto;
   }
 }
 
