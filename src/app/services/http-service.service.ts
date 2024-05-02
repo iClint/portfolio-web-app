@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Page } from '../models/page.model';
 
 @Injectable({
   providedIn: 'root',
@@ -8,6 +9,14 @@ import { Observable } from 'rxjs';
 export class HttpService {
   result: any;
   constructor(private http: HttpClient) {}
+
+  get<T>(url: string): Observable<T> {
+    return this.http.get<T>(url);
+  }
+
+  post<T>(url: string, body: any): Observable<T> {
+    return this.http.post<T>(url, body);
+  }
 
   sendGraphQLQuery(): Observable<any> {
     const query = `
@@ -22,6 +31,6 @@ export class HttpService {
 }
     `;
 
-    return this.http.post<any>('http://localhost:5178/graphql/', { query });
+    return this.http.post<Page>('http://localhost:5178/graphql/', { query });
   }
 }

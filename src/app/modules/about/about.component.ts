@@ -4,6 +4,7 @@ import { aboutConfig } from './about.config';
 import { HttpService } from '../../services/http-service.service';
 import { CommonModule } from '@angular/common';
 import { take } from 'rxjs/operators';
+import { Page } from '../../models/page.model';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +15,7 @@ import { take } from 'rxjs/operators';
 })
 export class AboutComponent implements OnInit {
   _config = aboutConfig;
-  postResult: any;
+  fetchedPage?: Page;
 
   constructor(private httpService: HttpService) {}
 
@@ -24,7 +25,7 @@ export class AboutComponent implements OnInit {
       .pipe(take(1))
       .subscribe({
         next: (result) => {
-          this.postResult = result;
+          this.fetchedPage = result.data.page;
         },
         error: (error) => {
           console.log('Error: ', error);

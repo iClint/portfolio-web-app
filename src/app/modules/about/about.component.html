@@ -1,8 +1,8 @@
 <div class="temp">
   <mat-card class="card">
-    @if(postResult){
+    @if(fetchedPage){
     <mat-card-content>
-      @for(section of postResult.data.page.sections; track section){
+      @for(section of fetchedPage.sections; track section){
       <h3>{{ section.heading }}</h3>
       @for(item of section.content; track item){<p>{{ item }}</p>}
       } </mat-card-content
