@@ -32,15 +32,13 @@ import {
           opacity: '1',
         })
       ),
-      transition('collapsed => expanded', [animate('0.25s ease-out')]),
-      // Define the reverse transition
-      transition('expanded => collapsed', [animate('0.25s ease-out')]),
+      transition('collapsed <=> expanded', [animate('0.25s ease-out')]),
     ]),
   ],
 })
 export class NavigationComponent {
   navOptions = ['about', 'blog', 'portfolio', 'contact'];
-  isMenuVisible: boolean = true;
+  isMenuVisible: boolean = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {

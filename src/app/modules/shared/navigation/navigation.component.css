@@ -4,13 +4,6 @@
 }
 .navigation {
   background-color: white;
-  /* background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgb(255, 255, 255) 20%,
-    rgb(255, 255, 255) 80%,
-    rgba(255, 255, 255, 0) 100%
-  ); */
 }
 .navigation__frame {
   height: 1px;
@@ -74,8 +67,12 @@
 }
 /* Small screen */
 @media screen and (max-width: 430px) {
+  .desktop-nav-menu {
+    display: none;
+  }
+
   .navigation__hamburger {
-    display: block;
+    display: flex;
   }
 
   .navigation__menu-container {
@@ -98,7 +95,11 @@
 }
 
 /* Desktop */
-@media screen and (max-width: 430px) {
+@media screen and (min-width: 430px) {
+  .mobile-nav-menu {
+    display: none;
+  }
+
   .navigation__menu-container {
     display: flex;
   }
