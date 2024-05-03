@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     this.httpService
-      .sendGraphQLQuery()
+      .fetchPage('About')
       .pipe(take(1))
       .subscribe({
         next: (result) => {

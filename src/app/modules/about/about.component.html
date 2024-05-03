@@ -3,8 +3,8 @@
     @if(fetchedPage){
     <mat-card-content>
       @for(section of fetchedPage.sections; track section){
-      <h3>{{ section.heading }}</h3>
-      @for(item of section.content; track item){<p>{{ item }}</p>}
+      <h3 class="heading">{{ section.heading }}</h3>
+      @for(item of section.content; track item){<p class="content">{{ item }}</p>}
       } </mat-card-content
     >}
   </mat-card>

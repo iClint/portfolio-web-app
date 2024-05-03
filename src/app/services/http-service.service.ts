@@ -18,19 +18,21 @@ export class HttpService {
     return this.http.post<T>(url, body);
   }
 
-  sendGraphQLQuery(): Observable<any> {
-    const query = `
-   query{
-     page(title: "About") {
-      title
-      sections {
-        heading
-        content
-    }
-  }
-}
-    `;
-
+  fetchPage(title: string): Observable<any> {
+    const query = this.pageQuery(title);
     return this.http.post<Page>('http://localhost:5178/graphql/', { query });
+  }
+
+  pageQuery(title: string): string {
+    return `
+      query{
+        page(title: "${title}") {
+        title
+        sections {
+          heading
+          content
+        }
+      }
+    }`;
   }
 }
