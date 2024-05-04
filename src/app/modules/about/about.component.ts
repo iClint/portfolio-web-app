@@ -5,11 +5,12 @@ import { HttpService } from '../../services/http-service.service';
 import { CommonModule } from '@angular/common';
 import { take } from 'rxjs/operators';
 import { Page } from '../../models/page.model';
+import { CarouselComponent } from '../shared/carousel/carousel.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [MatCardModule, CommonModule],
+  imports: [MatCardModule, CommonModule, CarouselComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })

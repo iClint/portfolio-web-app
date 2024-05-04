@@ -6,5 +6,5 @@ export interface Page {
 export interface Section {
     heading: string;
     content: string;
-    imageUrl?: string;
+    imageUrls?: string[];
 }

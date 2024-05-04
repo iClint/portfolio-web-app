@@ -31,6 +31,7 @@ export class HttpService {
         sections {
           heading
           content
+          imageUrls
         }
       }
     }`;

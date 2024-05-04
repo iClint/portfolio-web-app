@@ -4,7 +4,19 @@
     <mat-card-content>
       @for(section of fetchedPage.sections; track section){
       <h3 class="heading">{{ section.heading }}</h3>
-      @for(item of section.content; track item){<p class="content">{{ item }}</p>}
+      <div class="content-container">
+        @for(item of section.content; track item){
+        <div>
+          <p class="content">{{ item }}</p>
+        </div>
+        }
+        <div>
+          <app-carousel
+            class="medium"
+            [images]="section.imageUrls"
+          ></app-carousel>
+        </div>
+      </div>
       } </mat-card-content
     >}
   </mat-card>
