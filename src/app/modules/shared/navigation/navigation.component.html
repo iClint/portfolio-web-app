@@ -1,34 +1,32 @@
-<nav class="navigation" [ngClass]="{ 'show-menu': isMenuVisible }">
-  <div class="navigation__frame"></div>
-  <div class="desktop-nav-menu">
+<nav class="navigation">
+  <div class="navigation__desktop">
     <ng-container *ngTemplateOutlet="navMenu"></ng-container>
   </div>
   <div
-    class="mobile-nav-menu"
+    class="navigation__mobile"
     [@expandCollapse]="isMenuVisible ? 'expanded' : 'collapsed'"
   >
     <ng-container *ngTemplateOutlet="navMenu"></ng-container>
   </div>
-  <div class="navigation__frame"></div>
   <div class="navigation__hamburger" (click)="toggleMenu()">
-    <ng-container *ngTemplateOutlet="hamburger"></ng-container>
+    <div class="hamburger-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </div>
 </nav>
 
 <ng-template #navMenu>
-  <div class="navigation__menu-container">
-    <ul class="navigation__menu" *ngFor="let navOption of navOptions" c>
+  <ul class="navigation__menu" *ngFor="let navOption of navOptions">
+    <a
+      class="navigation__links"
+      [routerLink]="navOption.url"
+      routerLinkActive="active-route"
+    >
       <li class="navigation__menu-items">
-        <a class="nav-link" href="#">{{ navOption }}</a>
+        {{ navOption.label }}
       </li>
-    </ul>
-  </div>
-</ng-template>
-
-<ng-template #hamburger>
-  <div class="hamburger-icon">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
+    </a>
+  </ul>
 </ng-template>

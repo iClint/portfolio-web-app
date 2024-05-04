@@ -8,18 +8,18 @@
   box-sizing: border-box;
 }
 
-.temp{
-  display:flex;
+.temp {
+  display: flex;
   justify-content: center;
 }
 
 html {
-  background-image: url("./assets/images/Carbonfiber-semi-dark-Grey-Seamless-Pattern-For-Website-Background.jpg");
-  background-repeat:repeat; /* Prevent image from repeating */
+  background-color: grey;
+  background-repeat: repeat; /* Prevent image from repeating */
 }
 
 .card {
-  margin:4px;
+  margin: 4px;
   height: fit-content;
   width: 1200px;
 }

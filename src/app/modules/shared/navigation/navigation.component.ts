@@ -7,11 +7,12 @@ import {
   transition,
   trigger,
 } from '@angular/animations';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css',
   animations: [
@@ -19,9 +20,9 @@ import {
       state(
         'collapsed',
         style({
-          height: '0',
+          height: '2px',
           overflow: 'hidden',
-          opacity: '0',
+          opacity: '1',
         })
       ),
       state(
@@ -37,12 +38,16 @@ import {
   ],
 })
 export class NavigationComponent {
-  navOptions = ['about', 'blog', 'portfolio', 'contact'];
+  navOptions = [
+    { label: 'About', url: 'about' },
+    { label: 'Blog', url: 'blog' },
+    { label: 'Portfolio', url: 'portfolio' },
+    { label: 'Contact', url: 'contact' },
+  ];
   isMenuVisible: boolean = false;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
-    // Adjust the menu visibility based on screen size
     this.isMenuVisible = window.innerWidth > 430;
   }
   toggleMenu(): void {
